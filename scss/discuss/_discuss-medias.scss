@@ -1,0 +1,83 @@
+
+
+@media only screen and (max-width: 768px){
+
+    .discuss{
+        &-wrapper{
+            background-color: $gray-900;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            border-radius: 20px 20px 0px 0px;
+            position: relative;
+            &:after{
+                content: "";
+                width: 100%;
+                height: 1px;
+                background-color: $gray-700;
+                position: absolute;
+                top: 100%;
+                left: 0;
+            }
+            h1{
+                @include font-style(30px, $ff-InterSemiBold, $color-white);
+                line-height: 40px;
+                letter-spacing: -2%;
+                max-width: 600px;
+            }
+            button{
+                background-image: $primary-500;
+                width: 185px;
+                height: 68px;
+                border-radius: 50px;
+                @include font-style(18px, $ff-InterMedium, $color-white);
+                line-height: 28px;
+            }
+        }
+        
+    }
+   
+}
+
+@media only screen and (max-width: 450px){
+
+    .discuss{
+        &-wrapper{
+            background-color: $gray-900;
+            display: flex;
+            row-gap: 24px;
+            flex-direction: column;
+            align-items: center;
+            padding: 32px;
+            border-radius: 20px 20px 0px 0px;
+            position: relative;
+            &:after{
+                content: "";
+                width: 100%;
+                height: 1px;
+                background-color: $gray-700;
+                position: absolute;
+                top: 100%;
+                left: 0;
+            }
+            h1{
+                @include font-style(24px, $ff-InterSemiBold, $color-white);
+                line-height: 32px;
+                letter-spacing: -2%;
+                max-width: 600px;
+                text-align: center;
+            }
+            button{
+                background-image: $primary-500;
+                width: 185px;
+                height: 68px;
+                border-radius: 50px;
+                @include font-style(16px, $ff-InterMedium, $color-white);
+                line-height: 24px;
+            }
+        }
+        
+    }
+
+}

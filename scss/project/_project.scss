@@ -1,0 +1,111 @@
+#project {
+    width: 100%;
+    background-color: $color-bg;
+    background-image: url(../assets/images/bg-2.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.project {
+    &-wrapper {
+        padding: 100px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title {
+        @include font-style(72px, $ff-InterBold, $color-white);
+
+        span {
+            background: $primary-500;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    &__text {
+        @include font-style(20px, $ff-InterMedium, $gray-200);
+        line-height: 28px;
+        max-width: 920px;
+        text-align: center;
+        margin-bottom: 56px;
+    }
+
+    &__menu {
+        background-color: #F3F3F3;
+        border-radius: 100px;
+        display: flex;
+        padding: 8px;
+        margin-bottom: 64px;
+
+        &--item {
+            padding: 16px 24px;
+            background-color: transparent;
+            border-radius: 100px;
+
+            &:hover {
+                background-image: $primary-500;
+            }
+
+            &:hover &-link {
+                color: $color-white;
+            }
+
+            &-link {
+                @include font-style(16px, $ff-InterMedium, $gray-500);
+            }
+        }
+    }
+
+    &__card {
+        display: flex;
+        column-gap: 20px;
+
+        &--item {
+            padding: 16px;
+            max-width: 630px;
+            background-color: $gray-800;
+            border-radius: 32px;
+            position: relative;
+            cursor: pointer;
+
+            &::after {
+                content: "";
+                background-image: url(/assets/icons/project/arrow.svg);
+                background-repeat: no-repeat;
+                width: 218px;
+                height: 218px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                visibility: hidden;
+
+            }
+
+            &:hover::after {
+                visibility: visible;
+            }
+
+            &:hover img{
+                opacity: 0.6;
+            }
+
+            &-img {
+                img {
+                    border-radius: 20px;
+                }
+            }
+
+            &-title {
+                @include font-style(32px, $ff-InterBold, $color-white);
+            }
+
+            &-text {
+                @include font-style(20px, $ff-InterRegular, $gray-200);
+                line-height: 28px;
+            }
+        }
+    }
+}

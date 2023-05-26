@@ -1,0 +1,205 @@
+
+
+@media only screen and (max-width: 768px)  {
+
+    .intro{
+        &-wrapper{
+            padding-top: 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        &__header{
+            @include font-style(12px, $ff-InterMedium, $color-white);
+            line-height: 20px;
+            letter-spacing: 1px;
+            padding: 12px 16px;
+            background-color: #ffffff1a;
+            border-radius: 50px;
+        }
+        &__title{
+            text-align: center;
+            @include font-style(50px, $ff-InterBold, $color-white);
+            line-height: 76px;
+            align-items: center;
+            p{
+                background: $primary-500;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+        &__text{
+            text-align: center;
+            @include font-style(16px, $ff-InterMedium, $gray-200);
+            line-height: 28px;
+            max-width: 655px;
+        }
+            
+        &__link{
+            margin-top: 56px;
+            &--btn{
+                background-image: $primary-500;
+                width: 185px;
+                height: 68px;
+                border-radius: 50px;
+                @include font-style(18px, $ff-InterMedium, $color-white);
+                line-height: 28px;
+            }
+        }
+    
+        &__benefit{
+            border-radius: 10px;
+            margin-top: 80px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 43px;
+            background-image: $primary-500;
+            width: 100%;
+            padding: 0px 60px 57px;
+            &--title{
+                @include font-style(25px, $ff-InterSemiBold, $color-white);
+                line-height: 40px;
+                text-align: center;
+            }
+        }
+        &__card{
+            display: flex;
+            &--item{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                flex-basis: 50%;
+                &-name{
+                    @include font-style(18px, $ff-InterMedium, $color-white);
+                    line-height: 32px;
+                    margin-top: 10px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: 450px)  {
+
+    #intro{
+        min-height: 950px;
+    }
+    .intro{
+        &-wrapper{
+            padding-top: 128px;
+        }
+        &__header{
+            font-size: 10px;
+            padding: 8px 12px;
+        }
+        &__title{
+            font-size: 30px;
+            line-height: 44px;
+            letter-spacing: -2%;
+        }
+        &__text{
+            font-size: 12px;
+            line-height: 20px;
+        }
+        &__link{
+            margin-top: 40px;
+            &--btn{
+                font-size: 16px;
+            }
+        }
+        &__benefit{
+            padding: 0 25px 50px;
+            position: relative;
+            &--title{
+                font-size: 18px;
+                line-height: 28px;
+            }
+            &::after{
+                content: "";
+                background-image: url(../assets/icons/intro/dots.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+                width: 42px;
+                height: 15px;
+                position: absolute;
+                bottom: 10px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        &__card{
+          
+            &--item{
+              flex-basis: 100%;
+              &:not(:first-child) {
+                display: none;
+              }
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: 375px)  {
+
+    #intro{
+        min-height: 950px;
+    }
+    .intro{
+        &-wrapper{
+            padding-top: 128px;
+        }
+        &__header{
+            font-size: 10px;
+            padding: 8px 12px;
+        }
+        &__title{
+            font-size: 30px;
+            line-height: 44px;
+            letter-spacing: -2%;
+        }
+        &__text{
+            font-size: 12px;
+            line-height: 20px;
+        }
+        &__link{
+            margin-top: 40px;
+            &--btn{
+                font-size: 16px;
+            }
+        }
+        &__benefit{
+            padding: 0 25px 50px;
+            position: relative;
+            &--title{
+                font-size: 18px;
+                line-height: 28px;
+            }
+            &::after{
+                content: "";
+                background-image: url(../assets/icons/intro/dots.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+                width: 42px;
+                height: 15px;
+                position: absolute;
+                bottom: 10px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        &__card{
+          
+            &--item{
+              flex-basis: 100%;
+              &:not(:first-child) {
+                display: none;
+              }
+            }
+        }
+    }
+
+}

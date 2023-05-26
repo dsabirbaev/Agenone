@@ -1,0 +1,89 @@
+#intro{
+    min-height: 1120px;
+    width: 100%;
+    background-color: $color-bg;
+    background-image: url(../assets/images/bg-1.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+   
+}
+
+.intro{
+    &-wrapper{
+        padding-top: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__header{
+        @include font-style(14px, $ff-InterMedium, $color-white);
+        line-height: 20px;
+        letter-spacing: 1px;
+        padding: 12px 16px;
+        background-color: #ffffff1a;
+        border-radius: 50px;
+    }
+    &__title{
+        text-align: center;
+        @include font-style(72px, $ff-InterBold, $color-white);
+        line-height: 76px;
+        align-items: center;
+        p{
+            background: $primary-500;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+    &__text{
+        text-align: center;
+        @include font-style(20px, $ff-InterMedium, $gray-200);
+        line-height: 28px;
+        max-width: 655px;
+    }
+        
+    &__link{
+        margin-top: 56px;
+        &--btn{
+            background-image: $primary-500;
+            width: 185px;
+            height: 68px;
+            border-radius: 50px;
+            @include font-style(18px, $ff-InterMedium, $color-white);
+            line-height: 28px;
+        }
+    }
+
+    &__benefit{
+        border-radius: 10px;
+        margin-top: 80px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 43px;
+        background-image: $primary-500;
+        width: 100%;
+        padding: 0px 60px 57px;
+        // border: 1px solid red;
+        &--title{
+            @include font-style(32px, $ff-InterSemiBold, $color-white);
+            line-height: 40px;
+            text-align: center;
+        }
+    }
+    &__card{
+        display: flex;
+        &--item{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-basis: 50%;
+          
+            &-name{
+                @include font-style(24px, $ff-InterMedium, $color-white);
+                line-height: 32px;
+                margin-top: 10px;
+                text-align: center;
+            }
+        }
+    }
+}

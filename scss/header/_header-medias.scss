@@ -1,0 +1,128 @@
+
+@media only screen and (max-width: 768px)  {
+
+    .container {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    .nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 94px;
+        &__list{
+            display: flex;
+            column-gap: 20px;
+            &--item{
+                position: relative;
+                &-link{
+                    @include font-style(16px, $ff-InterMedium, $color-white);
+                    letter-spacing: 1%;
+                }
+                &::after{
+                    content: " ";
+                    width: 0;
+                    height: 2px;
+                    background-image: $primary-500;
+                    position: absolute;
+                    top: 115%;
+                    left: 50%;
+                    transform: translate(-50%);
+                    transition: all 0.3s ease;
+                }
+                &:hover::after{
+                    width: 100%
+                }
+    
+            }
+        }
+        &__contact{
+            @include font-style(16px, $ff-InterMedium, $color-white);
+            background-image: $primary-500;
+            padding: 16px 24px;
+            background: $primary-500;
+            border-radius: 100px;
+        }
+    
+        &__menu{
+            display: none;
+        }
+    }
+
+}
+
+
+
+@media only screen and (max-width: 450px)  {
+
+
+    .container {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .nav{
+        min-height: 80px;
+        &__list{
+            display: none;
+        }
+        &__contact{
+            display: none;
+        }
+        &__menu{
+            display: block;
+        }
+    }
+
+}
+
+
+@media only screen and (max-width: 375px)  {
+
+
+    .container {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0 10px;
+    }
+
+    .nav{
+        min-height: 80px;
+        &__list{
+            display: none;
+        }
+        &__contact{
+            display: none;
+        }
+        &__menu{
+            display: block;
+        }
+    }
+
+}
+
+@media only screen and (max-width: 320px)  {
+
+
+    .container {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0 0px;
+    }
+
+    .nav{
+        min-height: 80px;
+        &__list{
+            display: none;
+        }
+        &__contact{
+            display: none;
+        }
+        &__menu{
+            display: block;
+        }
+    }
+
+}

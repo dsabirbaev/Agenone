@@ -1,0 +1,42 @@
+@import 'variables',
+'mixins',
+'fonts';
+
+
+
+.container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 20px;
+    //border: 1px solid red;
+}
+
+
+
+@import './header/header';
+@import './header/header-medias';
+
+
+@import './intro/intro';
+@import './intro/intro-medias';
+
+@import './services/services';
+@import './services/services-medias';
+
+@import './achievement/achievement';
+@import './achievement/achievement-medias';
+
+@import './project/project';
+@import './project/project-medias';
+
+@import './company/company';
+@import './company/company-medias';
+
+@import './comments/comments';
+@import './comments/comments-medias';
+
+@import './discuss/discuss';
+@import './discuss/discuss-medias';
+
+@import './footer/footer';
+@import './footer/footer-medias';

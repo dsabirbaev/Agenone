@@ -1,0 +1,226 @@
+
+
+@media only screen and (max-width: 768px)  {
+
+    .project {
+        &-wrapper {
+            padding: 70px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        &__title {
+            @include font-style(50px, $ff-InterBold, $color-white);
+            span {
+                background: $primary-500;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+    
+        &__text {
+            @include font-style(16px, $ff-InterMedium, $gray-200);
+            line-height: 22px;
+            max-width: 100%;
+            text-align: center;
+            margin-bottom: 56px;
+        }
+    
+        &__menu {
+            background-color: #F3F3F3;
+            border-radius: 100px;
+            display: flex;
+            padding: 8px;
+            margin-bottom: 64px;
+            
+            &--item {
+                padding: 16px 24px;
+                background-color: transparent;
+                border-radius: 100px;
+    
+                &:hover {
+                    background-image: $primary-500;
+                }
+    
+                &:hover &-link {
+                    color: $color-white;
+                }
+    
+                &-link {
+                    @include font-style(16px, $ff-InterMedium, $gray-500);
+                }
+            }
+        }
+    
+        &__card {
+            display: flex;
+            row-gap: 20px;
+            flex-direction: column;
+            &--item {
+                padding: 16px;
+                max-width: 630px;
+                background-color: $gray-800;
+                border-radius: 32px;
+                position: relative;
+                cursor: pointer;
+    
+                &::after {
+                    content: "";
+                    background-image: url(/assets/icons/project/arrow.svg);
+                    background-repeat: no-repeat;
+                    width: 218px;
+                    height: 218px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    visibility: hidden;
+    
+                }
+    
+                &:hover::after {
+                    visibility: visible;
+                }
+    
+                &:hover img{
+                    opacity: 0.6;
+                }
+    
+                &-img {
+                    img {
+                        border-radius: 20px;
+                    }
+                }
+    
+                &-title {
+                    @include font-style(32px, $ff-InterBold, $color-white);
+                }
+    
+                &-text {
+                    @include font-style(20px, $ff-InterRegular, $gray-200);
+                    line-height: 28px;
+                }
+            }
+        }
+    }
+
+}
+
+
+@media only screen and (max-width: 450px)  {
+
+
+    .project {
+        &-wrapper {
+            padding: 56px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        &__title {
+            @include font-style(36px, $ff-InterBold, $color-white);
+            line-height: 44px;
+            letter-spacing: -2%;
+            text-align: center;
+            span {
+                background: $primary-500;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+    
+        &__text {
+            @include font-style(14px, $ff-InterMedium, $gray-200);
+            line-height: 20px;
+            max-width: 100%;
+            text-align: center;
+            margin-bottom: 32px;
+        }
+    
+        &__menu {
+            background-color: #F3F3F3;
+            border-radius: 100px;
+            display: flex;
+            padding: 8px;
+            margin-bottom: 32px;
+            max-width: 100%;
+            &--item {
+                padding: 8px 16px;
+                background-color: transparent;
+                border-radius: 100px;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+               
+                &:hover {
+                    background-image: $primary-500;
+                }
+    
+                &:hover &-link {
+                    color: $color-white;
+                }
+    
+                &-link {
+                    @include font-style(14px, $ff-InterMedium, $gray-500);
+                }
+            }
+        }
+    
+        &__card {
+            display: flex;
+            column-gap: 0px;
+            row-gap: 24px;
+            flex-direction: column;
+            &--item {
+                padding: 16px;
+                max-width: 100%;
+                background-color: $gray-800;
+                border-radius: 32px;
+                position: relative;
+                cursor: pointer;
+               
+                &::after {
+                    content: "";
+                    background-image: url(/assets/icons/project/arrow.svg);
+                    background-repeat: no-repeat;
+                    width: 218px;
+                    height: 218px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    visibility: hidden;
+    
+                }
+    
+                &:hover::after {
+                    visibility: visible;
+                }
+    
+                &:hover img{
+                    opacity: 0.6;
+                }
+    
+                &-img {
+                    img {
+                        border-radius: 20px;
+                        width: 100%;
+                    }
+                }
+    
+                &-title {
+                    @include font-style(18px, $ff-InterBold, $color-white);
+                }
+    
+                &-text {
+                    @include font-style(16px, $ff-InterRegular, $gray-200);
+                    line-height: 28px;
+                }
+            }
+        }
+    }
+
+}

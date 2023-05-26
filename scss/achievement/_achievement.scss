@@ -1,0 +1,40 @@
+
+
+#achievement{
+    width: 100%;
+    background-image: url(../assets/images/achievement/1.png);
+    background-repeat: no-repeat;
+    background-color: #38C6821A;
+}
+.achievement{
+    &-wrapper{
+        padding: 80px 0;
+    }
+    &__text{
+        @include font-style(44px, $ff-InterMedium, $gray-900);
+        max-width: 1200px;
+        line-height: 52px;
+    }
+    &__number{
+        margin-top: 64px;
+        background-image: $primary-500;
+        border-radius: 20px;
+        display: flex;
+        padding: 32px;
+        &--item{
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            h1{
+                @include font-style(72px, $ff-InterBold, $color-white); 
+                margin-bottom: 12px;
+            }
+            h5{
+                @include font-style(24px, $ff-InterMedium, $color-white); 
+            }
+        }
+       
+    }
+}
